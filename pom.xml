@@ -54,6 +54,16 @@
                 <arguments>run fmp -- --myarg \"Has Space\"</arguments>
               </configuration>
             </execution>
+
+            <execution>
+              <id>Run Script: run npm task without quotes</id>
+              <goals>
+                <goal>npm</goal>
+              </goals>
+              <configuration>
+                <arguments>run fmp -- --myarg Has Space</arguments>
+              </configuration>
+            </execution>
         </executions>
       </plugin>
     </plugins>
