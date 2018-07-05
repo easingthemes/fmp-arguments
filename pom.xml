@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>fmp test</name>
+
+  <groupId>fmp.test</groupId>
+  <version>1.0.0</version>
+  <artifactId>cookies-cli</artifactId>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+            <execution>
+              <id>Setup: Install NodeJs</id>
+              <goals>
+                <goal>install-node-and-npm</goal>
+              </goals>
+              <configuration>
+                <nodeVersion>v8.11.3</nodeVersion>
+                <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
+              </configuration>
+            </execution>
+          <execution>
+            <id>Setup: Install npm packages</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>Run Script: run npm task with quotes</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run fmp -- --myarg "Has Space"</arguments>
+            </configuration>
+          </execution>
+
+            <execution>
+              <id>Run Script: run npm task with escaped quotes</id>
+              <goals>
+                <goal>npm</goal>
+              </goals>
+              <configuration>
+                <arguments>run fmp -- --myarg \"Has Space\"</arguments>
+              </configuration>
+            </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,19 @@
+{
+  "name": "fmp-arguments",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "fmp": "node ./index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easingthemes/fmp-arguments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easingthemes/fmp-arguments/issues"
+  },
+  "homepage": "https://github.com/easingthemes/fmp-arguments#readme"
+}
